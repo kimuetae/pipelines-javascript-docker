@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kimuetaepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kimuetaepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kimuetaepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kimuetaepipelinesjavascriptdocker 
+          image: user32acr.azurecr.io/kimuetaepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
